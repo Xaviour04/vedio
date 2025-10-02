@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vedio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="#e3e3e3"
+        >
+          <path d="M0 0h24v24H0V0z" fill="none" />
+          <path
+            d="M21.5 4H18l1.74 2.61c.11.17-.01.39-.21.39h-2c-.33 0-.65-.17-.83-.45L15 4h-2l1.74 2.61c.11.17-.01.39-.21.39h-2c-.33 0-.65-.17-.83-.45L10 4H8l1.74 2.61c.11.17-.01.39-.21.39h-2c-.33 0-.64-.17-.83-.45L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4.5c0-.28-.22-.5-.5-.5zM11.25 15.25L10 18l-1.25-2.75L6 14l2.75-1.25L10 10l1.25 2.75L14 14l-2.75 1.25zm5.69-3.31L16 14l-.94-2.06L13 11l2.06-.94L16 8l.94 2.06L19 11l-2.06.94z"
+          />
+        </svg>
+
+        <span>Vedio</span>
+      </h1>
+
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 -960 960 960"
+          fill="#e3e3e3"
+        >
+          <path
+            d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
+          />
+        </svg>
+
+        <span>New Project</span>
+      </button>
+    </header>
+
+    <aside id="assets-aside">
+      <header>
+        <h2>Assets</h2>
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M240-160q-33 0-56.5-23.5T160-240v-80q0-17 11.5-28.5T200-360q17 0 28.5 11.5T240-320v80h480v-80q0-17 11.5-28.5T760-360q17 0 28.5 11.5T800-320v80q0 33-23.5 56.5T720-160H240Zm200-486-75 75q-12 12-28.5 11.5T308-572q-11-12-11.5-28t11.5-28l144-144q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l144 144q12 12 11.5 28T652-572q-12 12-28.5 12.5T595-571l-75-75v286q0 17-11.5 28.5T480-320q-17 0-28.5-11.5T440-360v-286Z"
+            />
+          </svg>
+          <span>Upload</span>
+        </button>
+      </header>
+      <section class="collapsible">
+        <h3>Videos</h3>
+        <button class="icon collapse-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
+            />
+          </svg>
+        </button>
+        <ul>
+          <li>
+            <img
+              src="https://images.pexels.com/photos/33929358/pexels-photo-33929358.jpeg"
+              alt=""
+            />
+            <span>02:25</span>
+
+            <div class="hover">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://images.pexels.com/photos/33404886/pexels-photo-33404886.jpeg"
+              alt=""
+            />
+            <span>00:45</span>
+
+            <div class="hover">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
+                />
+              </svg>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="collapsible">
+        <h3>Images</h3>
+        <button class="icon collapse-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
+            />
+          </svg>
+        </button>
+        <ul>
+          <li>
+            <img
+              src="https://images.pexels.com/photos/29123428/pexels-photo-29123428.jpeg"
+              alt=""
+            />
+            <div class="hover">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
+                />
+              </svg>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://images.pexels.com/photos/34035071/pexels-photo-34035071.jpeg"
+              alt=""
+            />
+
+            <div class="hover">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
+                />
+              </svg>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="collapsible">
+        <h3>Audio</h3>
+        <button class="icon collapse-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
+            />
+          </svg>
+        </button>
+        <ul class="audio">
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-382q0-17 11.5-28.5T520-840h160q17 0 28.5 11.5T720-800v80q0 17-11.5 28.5T680-680H560v400q0 66-47 113t-113 47Z"
+              />
+            </svg>
+            <p>upbeat-corporate.mp3</p>
+            <span>01:45</span>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-382q0-17 11.5-28.5T520-840h160q17 0 28.5 11.5T720-800v80q0 17-11.5 28.5T680-680H560v400q0 66-47 113t-113 47Z"
+              />
+            </svg>
+            <p>cinematic-piano.wav</p>
+            <span>02:30</span>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <main>
+      <div id="player">
+        <img
+          src="https://images.pexels.com/photos/29765221/pexels-photo-29765221.jpeg"
+          alt=""
+        />
+        <div id="player-controls">
+          <button class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M320-273v-414q0-17 12-28.5t28-11.5q5 0 10.5 1.5T381-721l326 207q9 6 13.5 15t4.5 19q0 10-4.5 19T707-446L381-239q-5 3-10.5 4.5T360-233q-16 0-28-11.5T320-273Z"
+              />
+            </svg>
+          </button>
+          <button class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M220-280v-400q0-17 11.5-28.5T260-720q17 0 28.5 11.5T300-680v400q0 17-11.5 28.5T260-240q-17 0-28.5-11.5T220-280Zm458-1L430-447q-9-6-13.5-14.5T412-480q0-10 4.5-18.5T430-513l248-166q5-4 11-5t11-1q16 0 28 11t12 29v330q0 18-12 29t-28 11q-5 0-11-1t-11-5Z"
+              />
+            </svg>
+          </button>
+          <button class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M660-280v-400q0-17 11.5-28.5T700-720q17 0 28.5 11.5T740-680v400q0 17-11.5 28.5T700-240q-17 0-28.5-11.5T660-280Zm-440-35v-330q0-18 12-29t28-11q5 0 11 1t11 5l248 166q9 6 13.5 14.5T548-480q0 10-4.5 18.5T530-447L282-281q-5 4-11 5t-11 1q-16 0-28-11t-12-29Z"
+              />
+            </svg>
+          </button>
+          <div id="timestamp">
+            <span>00:07</span>
+            /
+            <span>00:25</span>
+          </div>
+
+          <button class="icon" style="padding: 0.5em">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M680-80v-120H280q-33 0-56.5-23.5T200-280v-400H80q-17 0-28.5-11.5T40-720q0-17 11.5-28.5T80-760h120v-120q0-17 11.5-28.5T240-920q17 0 28.5 11.5T280-880v600h600q17 0 28.5 11.5T920-240q0 17-11.5 28.5T880-200H760v120q0 17-11.5 28.5T720-40q-17 0-28.5-11.5T680-80Zm0-280v-320H360v-80h320q33 0 56.5 23.5T760-680v320h-80Z"
+              />
+            </svg>
+          </button>
+          <button class="icon" style="padding: 0.5em">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M240-160q-17 0-28.5-11.5T200-200v-240h-40q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h160q17 0 28.5 11.5T360-480q0 17-11.5 28.5T320-440h-40v240q0 17-11.5 28.5T240-160Zm0-440q-17 0-28.5-11.5T200-640v-120q0-17 11.5-28.5T240-800q17 0 28.5 11.5T280-760v120q0 17-11.5 28.5T240-600Zm160 0q-17 0-28.5-11.5T360-640q0-17 11.5-28.5T400-680h40v-80q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v80h40q17 0 28.5 11.5T600-640q0 17-11.5 28.5T560-600H400Zm80 440q-17 0-28.5-11.5T440-200v-280q0-17 11.5-28.5T480-520q17 0 28.5 11.5T520-480v280q0 17-11.5 28.5T480-160Zm240 0q-17 0-28.5-11.5T680-200v-80h-40q-17 0-28.5-11.5T600-320q0-17 11.5-28.5T640-360h160q17 0 28.5 11.5T840-320q0 17-11.5 28.5T800-280h-40v80q0 17-11.5 28.5T720-160Zm0-280q-17 0-28.5-11.5T680-480v-280q0-17 11.5-28.5T720-800q17 0 28.5 11.5T760-760v280q0 17-11.5 28.5T720-440Z"
+              />
+            </svg>
+          </button>
+          <button class="icon" style="padding: 0.5em">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M200-200h80q17 0 28.5 11.5T320-160q0 17-11.5 28.5T280-120H160q-17 0-28.5-11.5T120-160v-120q0-17 11.5-28.5T160-320q17 0 28.5 11.5T200-280v80Zm560 0v-80q0-17 11.5-28.5T800-320q17 0 28.5 11.5T840-280v120q0 17-11.5 28.5T800-120H680q-17 0-28.5-11.5T640-160q0-17 11.5-28.5T680-200h80ZM200-760v80q0 17-11.5 28.5T160-640q-17 0-28.5-11.5T120-680v-120q0-17 11.5-28.5T160-840h120q17 0 28.5 11.5T320-800q0 17-11.5 28.5T280-760h-80Zm560 0h-80q-17 0-28.5-11.5T640-800q0-17 11.5-28.5T680-840h120q17 0 28.5 11.5T840-800v120q0 17-11.5 28.5T800-640q-17 0-28.5-11.5T760-680v-80Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="tools">
+        <button class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e3e3e3"
+          >
+            <path
+              d="m480-400-94 94q8 15 11 32t3 34q0 66-47 113T240-80q-66 0-113-47T80-240q0-66 47-113t113-47q17 0 34 3t32 11l94-94-94-94q-15 8-32 11t-34 3q-66 0-113-47T80-720q0-66 47-113t113-47q66 0 113 47t47 113q0 17-3 34t-11 32l438 438q27 27 12 61.5T783-120q-11 0-21.5-4.5T743-137L480-400Zm120-120-80-80 223-223q8-8 18.5-12.5T783-840q38 0 52.5 35T823-743L600-520ZM240-640q33 0 56.5-23.5T320-720q0-33-23.5-56.5T240-800q-33 0-56.5 23.5T160-720q0 33 23.5 56.5T240-640Zm240 180q8 0 14-6t6-14q0-8-6-14t-14-6q-8 0-14 6t-6 14q0 8 6 14t14 6ZM240-160q33 0 56.5-23.5T320-240q0-33-23.5-56.5T240-320q-33 0-56.5 23.5T160-240q0 33 23.5 56.5T240-160Z"
+            />
+          </svg>
+        </button>
+        <button class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M340-540h-40q-17 0-28.5-11.5T260-580q0-17 11.5-28.5T300-620h40v-40q0-17 11.5-28.5T380-700q17 0 28.5 11.5T420-660v40h40q17 0 28.5 11.5T500-580q0 17-11.5 28.5T460-540h-40v40q0 17-11.5 28.5T380-460q-17 0-28.5-11.5T340-500v-40Zm40 220q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l224 224q11 11 11 28t-11 28q-11 11-28 11t-28-11L532-372q-30 24-69 38t-83 14Zm0-80q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+            />
+          </svg>
+        </button>
+        <button class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M320-540q-17 0-28.5-11.5T280-580q0-17 11.5-28.5T320-620h120q17 0 28.5 11.5T480-580q0 17-11.5 28.5T440-540H320Zm60 220q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l224 224q11 11 11 28t-11 28q-11 11-28 11t-28-11L532-372q-30 24-69 38t-83 14Zm0-80q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div id="timeline">
+        <span id="timeline-cursor"></span>
+        <div id="time-scale">
+          <span>0s</span>
+          <span>5s</span>
+          <span>10s</span>
+          <span>15s</span>
+          <span>20s</span>
+          <span>25s</span>
+          <span>30s</span>
+          <span>35s</span>
+          <span>40s</span>
+          <span>45s</span>
+          <span>50s</span>
+          <span>55s</span>
+          <span>60s</span>
+        </div>
+        <div class="text-track">
+          <p>Title Text</p>
+        </div>
+        <div class="video-track">
+          <div>
+            <img
+              src="https://images.pexels.com/photos/29765221/pexels-photo-29765221.jpeg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="audio-track">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-382q0-17 11.5-28.5T520-840h160q17 0 28.5 11.5T720-800v80q0 17-11.5 28.5T680-680H560v400q0 66-47 113t-113 47Z"
+              />
+            </svg>
+            <span>upbeat-corporate.mp3</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside id="filters-aside" class="collapsed">
+      <header>
+        <h2>Filters</h2>
+        <button class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            fill="#e3e3e3"
+          >
+            <path
+              d="M240-160q-17 0-28.5-11.5T200-200v-240h-40q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h160q17 0 28.5 11.5T360-480q0 17-11.5 28.5T320-440h-40v240q0 17-11.5 28.5T240-160Zm0-440q-17 0-28.5-11.5T200-640v-120q0-17 11.5-28.5T240-800q17 0 28.5 11.5T280-760v120q0 17-11.5 28.5T240-600Zm160 0q-17 0-28.5-11.5T360-640q0-17 11.5-28.5T400-680h40v-80q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v80h40q17 0 28.5 11.5T600-640q0 17-11.5 28.5T560-600H400Zm80 440q-17 0-28.5-11.5T440-200v-280q0-17 11.5-28.5T480-520q17 0 28.5 11.5T520-480v280q0 17-11.5 28.5T480-160Zm240 0q-17 0-28.5-11.5T680-200v-80h-40q-17 0-28.5-11.5T600-320q0-17 11.5-28.5T640-360h160q17 0 28.5 11.5T840-320q0 17-11.5 28.5T800-280h-40v80q0 17-11.5 28.5T720-160Zm0-280q-17 0-28.5-11.5T680-480v-280q0-17 11.5-28.5T720-800q17 0 28.5 11.5T760-760v280q0 17-11.5 28.5T720-440Z"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <ul>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
+            alt=""
+          />
+
+          <div class="hover">
+            <span>Ocean</span>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
+            alt=""
+          />
+
+          <div class="hover">
+            <span>Mono</span>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
+            alt=""
+          />
+
+          <div class="hover">
+            <span>Azure</span>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
+            alt=""
+          />
+
+          <div class="hover">
+            <span>Negative</span>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
+            alt=""
+          />
+
+          <div class="hover">
+            <span>Vivid</span>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
+            alt=""
+          />
+
+          <div class="hover">
+            <span>Golden</span>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
+            alt=""
+          />
+
+          <div class="hover">
+            <span>Noir</span>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
+            alt=""
+          />
+
+          <div class="hover">
+            <span>Muted</span>
+          </div>
+        </li>
+      </ul>
+    </aside>
+  </body>
+</html>
