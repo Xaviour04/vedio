@@ -2,18 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vedio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wdth,wght@75..100,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="http://localhost:5173/" />
 
-    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      @font-face {
+        font-family: "Roboto";
+        src: url("/static/Roboto/Roboto-Regular.woff2") format("woff2"),
+          url("/static/Roboto/Roboto-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Roboto";
+        src: url("/static/Roboto/Roboto-Medium.woff2") format("woff2"),
+          url("/static/Roboto/Roboto-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Roboto";
+        src: url("/static/Roboto/Roboto-SemiBold.woff2") format("woff2"),
+          url("/static/Roboto/Roboto-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Roboto";
+        src: url("/static/Roboto/Roboto-Bold.woff2") format("woff2"),
+          url("/static/Roboto/Roboto-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-display: swap;
+      }
+    </style>
+
+    <link vite-inline rel="stylesheet" href="/src/style.css" />
     <script type="module" src="/src/main.ts" defer></script>
   </head>
 
@@ -41,11 +69,11 @@
           fill="#e3e3e3"
         >
           <path
-            d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
+            d="M632.65-592.35 298.7-258.39q-15.53 15.52-37.05 15.24-21.52-.28-37.04-15.81-15.52-15.52-15.52-37.32 0-21.81 15.52-37.33L558-667H285.65q-22.08 0-37.54-15.46-15.46-15.45-15.46-37.54t15.46-37.54Q263.57-773 285.65-773h400q22.09 0 37.55 15.46 15.45 15.45 15.45 37.54v400q0 22.09-15.45 37.54Q707.74-267 685.65-267q-22.08 0-37.54-15.46-15.46-15.45-15.46-37.54v-272.35Z"
           />
         </svg>
 
-        <span>New Project</span>
+        <span>Export Video</span>
       </button>
     </header>
 
@@ -80,10 +108,7 @@
         </button>
         <ul>
           <li>
-            <img
-              src="https://images.pexels.com/photos/33929358/pexels-photo-33929358.jpeg"
-              alt=""
-            />
+            <img src="/static/pexels-photo-33929358.jpeg" alt="" />
             <span>02:25</span>
 
             <div class="hover">
@@ -99,10 +124,7 @@
             </div>
           </li>
           <li>
-            <img
-              src="https://images.pexels.com/photos/33404886/pexels-photo-33404886.jpeg"
-              alt=""
-            />
+            <img src="/static/pexels-photo-33404886.jpeg" alt="" />
             <span>00:45</span>
 
             <div class="hover">
@@ -134,10 +156,7 @@
         </button>
         <ul>
           <li>
-            <img
-              src="https://images.pexels.com/photos/29123428/pexels-photo-29123428.jpeg"
-              alt=""
-            />
+            <img src="/static/pexels-photo-29123428.jpeg" alt="" />
             <div class="hover">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -151,10 +170,7 @@
             </div>
           </li>
           <li>
-            <img
-              src="https://images.pexels.com/photos/34035071/pexels-photo-34035071.jpeg"
-              alt=""
-            />
+            <img src="/static/pexels-photo-34035071.jpeg" alt="" />
 
             <div class="hover">
               <svg
@@ -217,7 +233,8 @@
     <main>
       <div id="player">
         <img
-          src="https://images.pexels.com/photos/29765221/pexels-photo-29765221.jpeg"
+          src="/static/pexels-photo-29765221.jpeg"
+          fetchpriority="high"
           alt=""
         />
         <div id="player-controls">
@@ -354,10 +371,7 @@
         </div>
         <div class="video-track">
           <div>
-            <img
-              src="https://images.pexels.com/photos/29765221/pexels-photo-29765221.jpeg"
-              alt=""
-            />
+            <img src="/static/pexels-photo-29765221.jpeg" alt="" />
           </div>
         </div>
         <div class="audio-track">
@@ -380,14 +394,14 @@
     <aside id="filters-aside" class="collapsed">
       <header>
         <h2>Filters</h2>
-        <button class="icon">
+        <button class="icon collapse-btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -960 960 960"
             fill="#e3e3e3"
           >
             <path
-              d="M240-160q-17 0-28.5-11.5T200-200v-240h-40q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h160q17 0 28.5 11.5T360-480q0 17-11.5 28.5T320-440h-40v240q0 17-11.5 28.5T240-160Zm0-440q-17 0-28.5-11.5T200-640v-120q0-17 11.5-28.5T240-800q17 0 28.5 11.5T280-760v120q0 17-11.5 28.5T240-600Zm160 0q-17 0-28.5-11.5T360-640q0-17 11.5-28.5T400-680h40v-80q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v80h40q17 0 28.5 11.5T600-640q0 17-11.5 28.5T560-600H400Zm80 440q-17 0-28.5-11.5T440-200v-280q0-17 11.5-28.5T480-520q17 0 28.5 11.5T520-480v280q0 17-11.5 28.5T480-160Zm240 0q-17 0-28.5-11.5T680-200v-80h-40q-17 0-28.5-11.5T600-320q0-17 11.5-28.5T640-360h160q17 0 28.5 11.5T840-320q0 17-11.5 28.5T800-280h-40v80q0 17-11.5 28.5T720-160Zm0-280q-17 0-28.5-11.5T680-480v-280q0-17 11.5-28.5T720-800q17 0 28.5 11.5T760-760v280q0 17-11.5 28.5T720-440Z"
+              d="M420-308q-8 0-14-5.5t-6-14.5v-304q0-9 6-14.5t14-5.5q2 0 14 6l145 145q5 5 7 10t2 11q0 6-2 11t-7 10L434-314q-3 3-6.5 4.5T420-308Z"
             />
           </svg>
         </button>
@@ -395,80 +409,56 @@
 
       <ul>
         <li>
-          <img
-            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
-            alt=""
-          />
+          <img src="/static/pexels-photo-33113960.jpeg" alt="" />
 
           <div class="hover">
             <span>Ocean</span>
           </div>
         </li>
         <li>
-          <img
-            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
-            alt=""
-          />
+          <img src="/static/pexels-photo-33113960.jpeg" alt="" />
 
           <div class="hover">
             <span>Mono</span>
           </div>
         </li>
         <li>
-          <img
-            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
-            alt=""
-          />
+          <img src="/static/pexels-photo-33113960.jpeg" alt="" />
 
           <div class="hover">
             <span>Azure</span>
           </div>
         </li>
         <li>
-          <img
-            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
-            alt=""
-          />
+          <img src="/static/pexels-photo-33113960.jpeg" alt="" />
 
           <div class="hover">
             <span>Negative</span>
           </div>
         </li>
         <li>
-          <img
-            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
-            alt=""
-          />
+          <img src="/static/pexels-photo-33113960.jpeg" alt="" />
 
           <div class="hover">
             <span>Vivid</span>
           </div>
         </li>
         <li>
-          <img
-            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
-            alt=""
-          />
+          <img src="/static/pexels-photo-33113960.jpeg" alt="" />
 
           <div class="hover">
             <span>Golden</span>
           </div>
         </li>
         <li>
-          <img
-            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
-            alt=""
-          />
+          <img src="/static/pexels-photo-33113960.jpeg" alt="" />
 
           <div class="hover">
             <span>Noir</span>
           </div>
         </li>
         <li>
-          <img
-            src="https://images.pexels.com/photos/33113960/pexels-photo-33113960.jpeg"
-            alt=""
-          />
+          <img src="/static/pexels-photo-33113960.jpeg" alt="" />
 
           <div class="hover">
             <span>Muted</span>

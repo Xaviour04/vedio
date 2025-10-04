@@ -26,7 +26,6 @@
 
   body {
     min-height: 100vh;
-    max-width: 100vw;
   }
 
   /* responsive images/videos */
@@ -41,6 +40,13 @@
 
 :root {
   --accent-clr: 168 85 247;
+  --bg-clr: 24 22 27;
+
+  --filters-panel-transition: width 250ms linear;
+  --filters-panel-width: 20vw;
+  &:has(#filters-aside.collapsed) {
+    --filters-panel-width: 3.75rem;
+  }
 }
 
 svg {
@@ -84,18 +90,10 @@ html {
 }
 
 body {
-  background-color: rgb(24 22 27);
-  /* overflow-x: hidden; */
+  background-color: rgb(var(--bg-clr));
   padding-top: 4.5rem;
   display: flex;
-  width: 200vw;
 }
-
-/* body::after {
-  content: "";
-  inset: 0 0 0 auto;
-  width: 50vw;
-} */
 
 body > header {
   display: flex;
@@ -105,7 +103,7 @@ body > header {
 
   position: absolute;
   inset: 0 0 auto 0;
-  background-color: rgb(24 22 27);
+  background-color: rgb(var(--bg-clr));
 
   &::after {
     content: "";
@@ -132,6 +130,7 @@ h1 svg {
 body > header button {
   font-size: 1rem;
   background-color: rgb(var(--accent-clr));
+  /* font-weight: 600; */
 
   &:hover {
     background-color: rgb(var(--accent-clr) / 0.8);
@@ -142,12 +141,13 @@ aside {
   padding: 1rem;
   position: relative;
   width: 20vw;
-  /* min-width: 20vw; */
 }
 
 main {
   padding: 1.5rem;
-  width: calc(80vw - 3.75rem);
+  width: calc(80vw - var(--filters-panel-width));
+  background-color: #1e1b22;
+  transition: var(--filters-panel-transition);
 }
 
 aside header {
@@ -252,7 +252,7 @@ aside ul:not(.audio) span {
   position: absolute;
 
   inset: auto 0.5em 0.5em auto;
-  background-color: rgb(24 22 27 / 0.75);
+  background-color: rgb(var(--bg-clr) / 0.75);
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
 }
@@ -332,39 +332,47 @@ aside::after {
 }
 
 #filters-aside {
-  width: 3.75rem;
-  /* overflow-x: hidden; */
+  position: relative;
+  width: var(--filters-panel-width);
+  transition: var(--filters-panel-transition);
+  overflow: hidden;
 }
 
 #filters-aside::after {
   left: 0;
 }
 
-#filters-aside.collapsed {
-  position: relative;
+#filters-aside .collapse-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+}
+
+#filters-aside .collapse-btn svg {
+  width: 100%;
+  height: 100%;
 }
 
 #filters-aside ul {
-  transition: opacity 100ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 #filters-aside.collapsed ul {
-  opacity: 0;
+  transform: translateX(20vw) translateY(100%) scale(2);
+  opacity: 1;
 }
 
 #filters-aside h2 {
   transform: translateY(0) rotate(0);
-  transition: transform 100ms linear;
+  transition: transform 250ms linear;
   z-index: 2;
 }
 
 #filters-aside.collapsed h2 {
   transform: translateX(-1ch) translateY(3.5rem) rotate(-90deg);
-}
-
-#filters-aside.collapsed header button {
-  position: absolute;
-  inset: 1rem 2rem auto 1rem;
 }
 
 #player {
@@ -379,8 +387,10 @@ aside::after {
 
 #player img {
   border-radius: 0.5rem;
+  aspect-ratio: 16 / 9;
+  width: 100%;
   max-height: 50vh;
-  width: fit-content;
+  object-fit: cover;
   overflow: hidden;
   margin-inline: auto;
 }
@@ -550,6 +560,6 @@ aside::after {
   background-color: rgb(var(--accent-clr));
   border-radius: 100vmax;
   display: block;
-  translate: -.5rem 0;
+  translate: -0.5rem 0;
   cursor: grab;
 }
