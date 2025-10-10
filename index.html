@@ -7,42 +7,15 @@
 
     <link rel="preconnect" href="http://localhost:5173/" />
 
-    <style>
-      @font-face {
-        font-family: "Roboto";
-        src: url("/static/Roboto/Roboto-Regular.woff2") format("woff2"),
-          url("/static/Roboto/Roboto-Regular.ttf") format("truetype");
-        font-weight: 400;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Roboto";
-        src: url("/static/Roboto/Roboto-Medium.woff2") format("woff2"),
-          url("/static/Roboto/Roboto-Medium.ttf") format("truetype");
-        font-weight: 500;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Roboto";
-        src: url("/static/Roboto/Roboto-SemiBold.woff2") format("woff2"),
-          url("/static/Roboto/Roboto-SemiBold.ttf") format("truetype");
-        font-weight: 600;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Roboto";
-        src: url("/static/Roboto/Roboto-Bold.woff2") format("woff2"),
-          url("/static/Roboto/Roboto-Bold.ttf") format("truetype");
-        font-weight: 700;
-        font-display: swap;
-      }
-    </style>
+    <link rel="preload" href="/static/Roboto/Roboto-Regular.woff2" as="font" />
+    <link rel="preload" href="/static/Roboto/Roboto-Medium.woff2" as="font" />
+    <link rel="preload" href="/static/Roboto/Roboto-SemiBold.woff2" as="font" />
+    <link rel="preload" href="/static/Roboto/Roboto-Bold.woff2" as="font" />
 
     <link vite-inline rel="stylesheet" href="/src/style.css" />
-    <script type="module" src="/src/main.ts" defer></script>
+    <script vite-inline type="module" src="/src/main.ts" defer></script>
+
+    <script type="module" src="/src/assets.ts"></script>
   </head>
 
   <body>
@@ -80,7 +53,7 @@
     <aside id="assets-aside">
       <header>
         <h2>Assets</h2>
-        <button>
+        <button id="upload-assets-btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 -960 960 960"
@@ -94,139 +67,55 @@
         </button>
       </header>
       <section class="collapsible">
-        <h3>Videos</h3>
-        <button class="icon collapse-btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 -960 960 960"
-            fill="#e3e3e3"
-          >
-            <path
-              d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
-            />
-          </svg>
-        </button>
-        <ul>
-          <li>
-            <img src="/static/pexels-photo-33929358.jpeg" alt="" />
-            <span>02:25</span>
-
-            <div class="hover">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 -960 960 960"
-                fill="#e3e3e3"
-              >
-                <path
-                  d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
-                />
-              </svg>
-            </div>
-          </li>
-          <li>
-            <img src="/static/pexels-photo-33404886.jpeg" alt="" />
-            <span>00:45</span>
-
-            <div class="hover">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 -960 960 960"
-                fill="#e3e3e3"
-              >
-                <path
-                  d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
-                />
-              </svg>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="collapsible">
-        <h3>Images</h3>
-        <button class="icon collapse-btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 -960 960 960"
-            fill="#e3e3e3"
-          >
-            <path
-              d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
-            />
-          </svg>
-        </button>
-        <ul>
-          <li>
-            <img src="/static/pexels-photo-29123428.jpeg" alt="" />
-            <div class="hover">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 -960 960 960"
-                fill="#e3e3e3"
-              >
-                <path
-                  d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
-                />
-              </svg>
-            </div>
-          </li>
-          <li>
-            <img src="/static/pexels-photo-34035071.jpeg" alt="" />
-
-            <div class="hover">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 -960 960 960"
-                fill="#e3e3e3"
-              >
-                <path
-                  d="M440-440H240q-17 0-28.5-11.5T200-480q0-17 11.5-28.5T240-520h200v-200q0-17 11.5-28.5T480-760q17 0 28.5 11.5T520-720v200h200q17 0 28.5 11.5T760-480q0 17-11.5 28.5T720-440H520v200q0 17-11.5 28.5T480-200q-17 0-28.5-11.5T440-240v-200Z"
-                />
-              </svg>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="collapsible">
-        <h3>Audio</h3>
-        <button class="icon collapse-btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 -960 960 960"
-            fill="#e3e3e3"
-          >
-            <path
-              d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
-            />
-          </svg>
-        </button>
-        <ul class="audio">
-          <li>
+        <header>
+          <h3>Videos</h3>
+          <button class="icon collapse-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 -960 960 960"
               fill="#e3e3e3"
             >
               <path
-                d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-382q0-17 11.5-28.5T520-840h160q17 0 28.5 11.5T720-800v80q0 17-11.5 28.5T680-680H560v400q0 66-47 113t-113 47Z"
+                d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
               />
             </svg>
-            <p>upbeat-corporate.mp3</p>
-            <span>01:45</span>
-          </li>
-          <li>
+          </button>
+        </header>
+        <ul id="video-assets-ul"></ul>
+      </section>
+      <section class="collapsible">
+        <header>
+          <h3>Images</h3>
+          <button class="icon collapse-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 -960 960 960"
               fill="#e3e3e3"
             >
               <path
-                d="M400-120q-66 0-113-47t-47-113q0-66 47-113t113-47q23 0 42.5 5.5T480-418v-382q0-17 11.5-28.5T520-840h160q17 0 28.5 11.5T720-800v80q0 17-11.5 28.5T680-680H560v400q0 66-47 113t-113 47Z"
+                d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
               />
             </svg>
-            <p>cinematic-piano.wav</p>
-            <span>02:30</span>
-          </li>
-        </ul>
+          </button>
+        </header>
+        <ul id="image-assets-ul"></ul>
+      </section>
+      <section class="collapsible">
+        <header>
+          <h3>Audio</h3>
+          <button class="icon collapse-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M459-381 314-526q-3-3-4.5-6.5T308-540q0-8 5.5-14t14.5-6h304q9 0 14.5 6t5.5 14q0 2-6 14L501-381q-5 5-10 7t-11 2q-6 0-11-2t-10-7Z"
+              />
+            </svg>
+          </button>
+        </header>
+        <ul class="audio" id="audio-assets-ul"></ul>
       </section>
     </aside>
 

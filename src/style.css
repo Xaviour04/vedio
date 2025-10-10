@@ -38,6 +38,38 @@
   }
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("/static/Roboto/Roboto-Regular.woff2") format("woff2"),
+    url("/static/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/static/Roboto/Roboto-Medium.woff2") format("woff2"),
+    url("/static/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/static/Roboto/Roboto-SemiBold.woff2") format("woff2"),
+    url("/static/Roboto/Roboto-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/static/Roboto/Roboto-Bold.woff2") format("woff2"),
+    url("/static/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   --accent-clr: 168 85 247;
   --bg-clr: 24 22 27;
@@ -93,6 +125,7 @@ body {
   background-color: rgb(var(--bg-clr));
   padding-top: 4.5rem;
   display: flex;
+  max-height: 100dvh;
 }
 
 body > header {
@@ -138,9 +171,14 @@ body > header button {
 }
 
 aside {
-  padding: 1rem;
+  padding: 0.5rem;
   position: relative;
   width: 20vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
 }
 
 main {
@@ -154,7 +192,6 @@ aside header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 h2 {
@@ -162,30 +199,49 @@ h2 {
   font-weight: 600;
 }
 
-aside header button {
+aside > header button {
   font-size: 0.875rem;
 }
 
-#assets-aside header button {
-  color: rgb(var(--accent-clr));
-  background-color: rgb(var(--accent-clr) / 5%);
-  font-weight: 500;
+#assets-aside > header {
+  padding-inline: 0.5rem;
 }
 
-#assets-aside header button:hover {
+#assets-aside > header button {
+  color: rgb(var(--accent-clr));
+  background-color: rgb(var(--accent-clr) / 5%);
+  /* font-weight: 500; */
+}
+
+#assets-aside > header button:hover {
   background-color: rgb(var(--accent-clr) / 15%);
 }
 
-#assets-aside header button svg {
+#assets-aside > header button svg {
   fill: currentColor;
 }
 
 aside section {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  margin-block: 1rem;
-  align-items: center;
+  background-color: #1e1b22;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  
+  overflow-y: scroll;
+  
+  display: flex;
+  flex-direction: column;
   gap: 0.5em;
+}
+
+aside section header {
+  width: 100%;
+}
+
+aside section.collapsed {
+  flex-shrink: 0;
+  flex-basis: auto;
 }
 
 .collapse-btn {
@@ -216,6 +272,11 @@ aside section {
   animation: rotate-btn 100ms linear forwards;
 }
 
+.collapsible ul {
+  /* overflow: hidden; */
+  transition: max-height 0.2s ease-out;
+}
+
 aside ul {
   list-style: none;
 
@@ -223,7 +284,11 @@ aside ul {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(min-content, auto);
   gap: 0.5rem;
+
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 aside ul li {
@@ -231,6 +296,8 @@ aside ul li {
   overflow: hidden;
   font-size: 0.875rem;
   cursor: pointer;
+  aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 aside ul li span {
@@ -240,7 +307,8 @@ aside ul li span {
 aside ul li img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
+  background-color: black;
 }
 
 aside ul:not(.audio) li {
@@ -287,6 +355,11 @@ aside li:hover .hover {
 
 ul.audio {
   grid-template-columns: 1fr;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 ul.audio li {
@@ -297,6 +370,7 @@ ul.audio li {
   align-items: center;
 
   height: calc(1ch + 2em);
+  width: 100%;
 
   &:hover {
     background-color: rgba(55 65 81 / 0.5);
@@ -532,15 +606,6 @@ aside::after {
   gap: 0.5em;
   align-items: center;
   padding: 0.5em 0.5em;
-}
-
-.collapsible {
-  overflow: hidden;
-}
-
-.collapsible ul {
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
 }
 
 #timeline-cursor {
